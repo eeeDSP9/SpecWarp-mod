@@ -15,7 +15,7 @@ for k = 1 : length(theFiles)
     [filepath,name,ext] = fileparts(file);
     [d,sr] = audioread(file);
     [a,g,e] = lpcfit(d,20);
-    alpha = 0.05;
+    alpha = 0.05; % change param within [-0.1, +0.1]
     [bhat, ahat]  = warppoles(a, alpha);
 
     dw = filter(bhat(1,:), 1, lpcsynth(ahat, g, e));
