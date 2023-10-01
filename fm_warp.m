@@ -1,4 +1,4 @@
-myFolder = 'C:\Users\user\MATLAB\Spectral Warping\SWcode'
+myFolder = % Enter directory.
 if ~isfolder(myFolder)
     errorMessage = sprintf('Error: The following folder does not exist:\n%s\nPlease specify a new folder.', myFolder);
     uiwait(warndlg(errorMessage));
@@ -23,7 +23,7 @@ for k = 1 : length(theFiles)
     soundsc(d,sr);
     soundsc(dw, sr);
     write_filename = name+"sw.wav";
-    write_dir = 'C:\Users\user\MATLAB\Spectral Warping\sw(+0.05)\';
+    write_dir = ; % Enter directory
     audiowrite(write_dir+write_filename,dw,sr)
     clear sound;
 end
