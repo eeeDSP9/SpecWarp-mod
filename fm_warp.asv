@@ -22,6 +22,6 @@ for k = 1 : length(theFiles)
 
     soundsc(d,sr);
     soundsc(dw, sr);
-    write_filename = "26-xx00xxxx-13speech-SW-" +num2str(k)+".wav";  
+    write_filename = "26-xx00xxxx-13speech-SW-" +num2str(k)+".wav";  % Customize file naming
     audiowrite(write_filename,dw,sr)
 end
